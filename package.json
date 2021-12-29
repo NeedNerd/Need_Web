@@ -16,6 +16,7 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "react-toastify": "^8.1.0",
+    "recoil": "^0.5.2",
     "sass": "^1.45.1",
     "scss": "^0.2.4",
     "toast": "^0.3.47",

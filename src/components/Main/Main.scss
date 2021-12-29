@@ -16,6 +16,8 @@
       font-family: Noto Sans CJK KR;
       font-style: normal;
       font-weight: 500;
+      color: #fcf6f5;
+      background-color: #bcbcbc;
     }
     &-My {
       width: 150px;
@@ -76,4 +78,8 @@
 }
 .giftEnd {
   background-color: #fce77d;
+}
+.check {
+  background: white;
+  color: #000000;
 }
