@@ -1,0 +1,173 @@
+.WriteForm {
+  width: 60%;
+  margin: auto;
+  margin-top: 30px;
+  &-TitleImg {
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    &-img {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+  }
+  &-Options {
+    margin-top: 30px;
+    width: 100%;
+    &-titleDiv {
+      width: 100%;
+      &-title {
+        font-size: 25px;
+        font-family: Noto Sans CJK KR;
+        font-style: normal;
+        font-weight: 600;
+      }
+      &-inputDiv {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 10px;
+        &-input {
+          box-sizing: border-box;
+          width: 100%;
+          height: 50px;
+          background: #ffffff;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          border: none;
+          border-radius: 10px;
+          padding: 0.3rem 0.5rem;
+          font-family: Noto Sans CJK KR;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          outline: none;
+        }
+      }
+    }
+    &-pictureText {
+      display: flex;
+      margin-top: 25px;
+      box-sizing: border-box;
+      &-pictureDiv {
+        width: 150px;
+        height: 150px;
+        box-sizing: border-box;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        &-img {
+          width: 150px;
+          height: 150px;
+          box-sizing: border-box;
+        }
+      }
+      &-textDiv {
+        width: 100%;
+        margin-left: 30px;
+        height: 150px;
+        box-sizing: border-box;
+        &-input {
+          width: 100%;
+          height: 100%;
+          box-sizing: border-box;
+          background: #ffffff;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          border: none;
+          border-radius: 10px;
+          padding: 1rem 1rem;
+          font-family: Noto Sans CJK KR;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          outline: none;
+        }
+      }
+    }
+    &-TagDiv {
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+
+      &-titleItems {
+        &-title {
+          &-tag {
+            font-family: Noto Sans CJK KR;
+            font-style: normal;
+            font-weight: 600;
+            color: #000000;
+            font-size: 18px;
+          }
+          &-count {
+            font-family: Noto Sans CJK KR;
+            font-style: normal;
+            font-weight: 600;
+            color: #6a6a6a;
+            font-size: 16px;
+          }
+        }
+        &-items {
+          display: flex;
+          align-items: center;
+          margin-top: 15px;
+          &-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 110px;
+            height: 30px;
+            color: white;
+            border-radius: 15px;
+            font-size: 15px;
+            font-family: Noto Sans CJK KR;
+            font-style: normal;
+            font-weight: 600;
+            margin-right: 30px;
+          }
+        }
+      }
+      &-money {
+        width: 250px;
+        height: 50px;
+        box-sizing: border-box;
+        margin-top: 20px;
+        &-title {
+          font-size: 30px;
+          font-family: Noto Sans CJK KR;
+          font-style: normal;
+          font-weight: 600;
+        }
+        &-input {
+          width: 85%;
+          height: 100%;
+          border: none;
+          outline: none;
+          font-size: 30px;
+          font-family: Noto Sans CJK KR;
+          font-style: normal;
+          font-weight: 600;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &-Submit {
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    margin-top: 60px;
+    &-btn {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border: none;
+      background: #292826;
+      border-radius: 10px;
+      color: white;
+      font-family: Noto Sans CJK KR;
+      font-style: normal;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+}
