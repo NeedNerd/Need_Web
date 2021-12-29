@@ -1,0 +1,72 @@
+.ItemForm {
+  width: 300px;
+  height: 320px;
+  box-sizing: border-box;
+  border-radius: 22px;
+  &-ImgDiv {
+    width: 100%;
+    height: 60%;
+    box-sizing: border-box;
+    border-radius: 22px 22px 0px 0px;
+    &-Img {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border-radius: 22px 22px 0px 0px;
+    }
+  }
+  &-TextDiv {
+    width: 100%;
+    height: 40%;
+    box-sizing: border-box;
+    border-radius: 0px 0px 22px 22px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &-TitleTag {
+      display: flex;
+      box-sizing: border-box;
+      justify-content: space-between;
+      &-Title {
+        font-size: 26px;
+        color: #000000;
+        font-family: Noto Sans CJK KR;
+        font-style: normal;
+        font-weight: 600;
+      }
+      &-Tag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95px;
+        height: 25px;
+        background-color: #8aaae5;
+        color: white;
+        border-radius: 15px;
+        font-size: 13px;
+        font-family: Noto Sans CJK KR;
+        font-style: normal;
+        font-weight: 600;
+      }
+    }
+    &-NameTime {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &-Name {
+        color: #535353;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+      }
+      &-Time {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        color: #8d8d8d;
+      }
+    }
+  }
+}
