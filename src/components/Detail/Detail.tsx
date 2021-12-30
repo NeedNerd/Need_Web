@@ -1,23 +1,82 @@
-import react from "react";
+import react, { useEffect } from "react";
 import "./Detail.scss";
 import mac from "../../assets/img/mac 1.svg";
+import useDetail from "../../hooks/Detail/useDetail";
+const SERVER = require("../../config/config.json").SERVER;
 
 const Detail = () => {
+  const idx: number = parseInt(window.location.pathname.substring(8), 10);
+  const {
+    ShowDetailPost,
+    contact,
+    content,
+    date,
+    local,
+    photo,
+    price,
+    state,
+    title,
+    writer,
+  } = useDetail();
+  useEffect(() => {
+    ShowDetailPost(idx);
+  }, []);
+  let data;
+  switch (state) {
+    case "0":
+      data = {
+        text: "구매원해요",
+        color: "#8aaae5",
+      };
+      break;
+    case "1":
+      data = {
+        text: "나눔원해요",
+        color: "#2bae66",
+      };
+      break;
+    case "2":
+      data = {
+        text: "이제 괜찮아요",
+        color: "#7d5fff",
+      };
+      break;
+    case "3":
+      data = {
+        text: "구매했어요",
+        color: "#f96167",
+      };
+      break;
+    case "4":
+      data = {
+        text: "나눔받았아요",
+        color: "#fce77d",
+      };
+      break;
+  }
+
   return (
     <>
       <div className="DetailForm">
         <div className="DetailForm-ImgText">
           <div className="DetailForm-ImgText-ImgDiv">
-            <img src={mac} alt="" className="DetailForm-ImgText-ImgDiv-img" />
+            <img
+              src={`${SERVER}/photo/${photo}`}
+              alt=""
+              className="DetailForm-ImgText-ImgDiv-img"
+            />
           </div>
           <div className="DetailForm-ImgText-Options">
             <div className="DetailForm-ImgText-Options-write">
               <div className="DetailForm-ImgText-Options-write-titleTag">
                 <div className="DetailForm-ImgText-Options-write-titleTag-title">
-                  맥북 삽니다
+                  {title}
                 </div>
-                <div className="DetailForm-ImgText-Options-write-titleTag-tag">
-                  구매원해요
+                <div
+                  className="DetailForm-ImgText-Options-write-titleTag-tag"
+                  style={{ backgroundColor: data?.color }}
+                >
+                  {data?.text}
                 </div>
               </div>
               <div className="DetailForm-ImgText-Options-write-writerMoney">
@@ -26,11 +85,11 @@ const Detail = () => {
                     작성자
                   </span>
                   <span className="DetailForm-ImgText-Options-write-writerMoney-writer-name">
-                    사승은
+                    {writer}
                   </span>
                 </div>
                 <div className="DetailForm-ImgText-Options-write-writerMoney-money">
-                  50000원
+                  {price}원
                 </div>
               </div>
               <div className="DetailForm-ImgText-Options-write-day">
@@ -38,7 +97,7 @@ const Detail = () => {
                   작성일자
                 </span>
                 <span className="DetailForm-ImgText-Options-write-day-time">
-                  2022/01/13
+                  {date}
                 </span>
               </div>
               <div className="DetailForm-ImgText-Options-write-phoneNum">
@@ -46,7 +105,7 @@ const Detail = () => {
                   연락처
                 </span>
                 <span className="DetailForm-ImgText-Options-write-phoneNum-number">
-                  010-1234-5678
+                  {contact}
                 </span>
               </div>
               <div className="DetailForm-ImgText-Options-write-area">
@@ -54,15 +113,14 @@ const Detail = () => {
                   지역
                 </span>
                 <span className="DetailForm-ImgText-Options-write-area-value">
-                  대구
+                  {local}
                 </span>
               </div>
               <div className="DetailForm-ImgText-Options-write-text">
-                제가 맥북이 급하게 필요한데 m1 16인치 150에 삽니다 지역은
-                대구이고 직거래 희망합니다 필요없으시면 꼭 연락주세요
+                {content}
               </div>
             </div>
-            <div className="DetailForm-ImgText-Options-state">
+            {/* <div className="DetailForm-ImgText-Options-state">
               <div className="DetailForm-ImgText-Options-state-title">
                 상태 변경
               </div>
@@ -77,7 +135,7 @@ const Detail = () => {
                   나눔받았아요
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

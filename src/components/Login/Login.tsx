@@ -31,7 +31,7 @@ const Login = () => {
             </div>
             <div className="LoginForm-Options-Inputs-Pw">
               <input
-                type="text"
+                type="password"
                 className="LoginForm-Options-Inputs-Pw-input"
                 value={password}
                 onChange={(e) => {

@@ -1,11 +1,15 @@
+import useItem from "../../../hooks/Detail/useDetail";
 import "./Item.scss";
+import { useNavigate } from "react-router-dom";
 const SERVER = require("../../../config/config.json").SERVER;
+
 export interface ItemProps {
   date: string;
   photo: string;
   state: string;
   title: string;
   writer: string;
+  idx: number;
 }
 
 const Item = ({
@@ -14,7 +18,10 @@ const Item = ({
   state,
   title,
   writer,
+  idx,
 }: ItemProps): JSX.Element => {
+  const navigate = useNavigate();
+
   let data;
   switch (state) {
     case "0":
@@ -51,7 +58,12 @@ const Item = ({
 
   return (
     <>
-      <div className="ItemForm">
+      <div
+        className="ItemForm"
+        onClick={() => {
+          navigate(`/detail/${idx}`);
+        }}
+      >
         <div className="ItemForm-ImgDiv">
           <img
             src={`${SERVER}/photo/${photo}`}
